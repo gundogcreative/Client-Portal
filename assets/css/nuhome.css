@@ -1,0 +1,157 @@
+/* 
+ * nuHome CSS Toolkit
+ * http://www.nuhome.com/
+ * Version: 1.0.1
+ *
+ * Copyright 2015 nuHome Promotions, LLC
+ * https://github.com/XXXX
+ * Author: ANH GDC
+ */
+
+
+/*
+ * Table of Contents
+
+0.1 -- Base HTML
+0.2 -- Typography
+0.3 -- Forms
+0.4 -- 
+0.5 -- Tables
+
+1.0 -- Page Structure
+1.1 -- Navigation
+1.2 -- Hero
+
+2.0 -- Page Specific XXXXXXXX
+
+ *
+ */
+
+
+
+
+/* ----- 0.1 -- Base HTML ----- */
+
+html {}
+body {font-family:'Open Sans', sans-serif;font-weight:400;color:#35373d;}
+
+
+
+
+/* ----- 0.2 Typography ----- */
+
+.nuhome {font-family:'Maven Pro', Arial, sans-serif;font-weight:500;letter-spacing:-.07em;}
+
+h1 {}
+p {color:#737a84;}
+
+
+
+
+/* ----- 0.5 Tables ----- */
+
+.table {}
+
+.tableHeader {}
+
+.tableHeader h4 {display:inline-block;text-transform:uppercase;color:#3776bc;font-weight:bold;}
+
+.tableHeader .tableControls {float:right;margin:9px 0 0;}
+.tableHeader .tableControls ul {margin:0;padding:0;}
+.tableHeader .tableControls ul li {display:inline;font-size:13px;margin-left:16px;}
+.tableHeader .tableControls ul li a {}
+.tableHeader .tableControls ul li a i {}
+.tableHeader .tableControls ul li a:hover {text-decoration:none;}
+.tableHeader .tableControls ul li a:hover i {}
+
+
+
+
+/* ----- 1.0 Page Structure ----- */
+
+section.page {padding:24px 0;}
+
+.pageTitle {margin:0 0 32px;}
+.pageTitle span {display:block;font-size:13px;line-height:17px;color:#747B85;}
+.pageTitle span span {display:inline-block;}
+
+
+
+
+/* ----- 1.1 Navigation ----- */
+
+.navBar {display:inline-block;width:100%;height:auto;padding:0;background-color:#3776bc;}
+
+.navBar .brand {float:left;margin:11px 0 12px 15px;position:absolute;top:0;left:0;}
+.navBar .brand a {}
+.navBar .brand a:hover {text-decoration:none;}
+.navBar .brand a span {color:#fff;font-size:32px;}
+
+.navBar .mobileNav {display:inline-block;width:100%;text-align:right;margin:15px 0 12px;}
+.navBar .mobileNav a {display:block;margin-right:15px;}
+
+.navBar #navWrap {}
+
+.navBar .mainNav {display:inline-block;width:100%;margin:24px 0 23px;}
+.navBar .mainNav ul {margin:0 15px 0 0;padding:0;text-align:right;}
+.navBar .mainNav ul li {display:inline-block;margin:0 0 0 12px;font-size:15px;}
+.navBar .mainNav ul li.active {}
+.navBar .mainNav ul li.divide {color:#fff;padding:0 6px;}
+.navBar .mainNav ul li a {color:#eee;}
+.navBar .mainNav ul li.active a {text-decoration:underline;font-weight:600;}
+.navBar .mainNav ul li a:hover {color:#fff;}
+.navBar .mainNav ul li.active a:hover {}
+
+.navBar .secondaryNav {display:inline-block;width:100%;background-color:#c9ccd2;margin:0;padding:0;height:auto;}
+.navBar .secondaryNav ul {margin:0;padding:21px 0;width:100%;text-align:center;}
+.navBar .secondaryNav ul li {display:inline-block;font-size:15px;margin:0 9px;}
+.navBar .secondaryNav ul li.active {}
+.navBar .secondaryNav ul li a {color:#737a84;}
+.navBar .secondaryNav ul li.active a {color:#35373d;font-weight:600;border-bottom:4px solid #A5A7AA;padding-bottom:18px;}
+.navBar .secondaryNav ul li a:hover {}
+.navBar .secondaryNav ul li.active a:hover {text-decoration:none;}
+
+@media (max-width: 991px) {  
+  .navBar #navWrap {clear:both;width:100%;}
+  
+  .navBar .mainNav {display:block;width:100%;clear:both;margin:0;padding:15px 0;background-color:rgba(0,0,0,0.1);}
+  .navBar .mainNav ul {text-align:center;}
+  .navBar .mainNav ul li {display:block;clear:both;margin:0;margin-bottom:10px;font-size:18px;}
+  .navBar .mainNav ul li:last-child {}
+  .navBar .mainNav ul li.divide {display:none;}
+  
+  .navBar .secondaryNav {}
+  .navBar .secondaryNav ul {padding:15px 0;}
+  .navBar .secondaryNav ul li {display:block;clear:both;margin:0;margin-bottom:10px;font-size:18px;}
+  .navBar .secondaryNav ul li:last-child {margin-bottom:0;}
+  .navBar .secondaryNav ul li a {}
+  .navBar .secondaryNav ul li.active a {border:none;padding:0;text-decoration:underline;}
+  .navBar .secondaryNav ul li.active a:hover {text-decoration:underline;}
+}
+
+
+
+
+/* ----- 1.2 Hero ----- */
+
+.hero {padding:80px 0px;DISPLAY:;background-color:rgba(201,204,210,0.45);}
+
+.hero-helper {position:relative;padding:40px 0;}
+.hero-helper .container {padding-top:40px;padding-bottom:40px;}
+.hero-helper .container a.dismiss {font-size:12px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

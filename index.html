@@ -23,20 +23,171 @@
 	
 	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
 	<link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/google-material-icons.css" rel="stylesheet">
 	<link href="assets/css/nuhome.css" rel="stylesheet">
-	<link href="assets/css/nuhomeClientPortal.css" rel="stylesheet">
         
 	<!--[if lt IE 9]>
 	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
 	
-    <link href='https://fonts.googleapis.com/css?family=Cabin:400,400italic,500,500italic,600,600italic,700,700italic|Maven+Pro:700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic|Maven+Pro:700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         
 	</head>
 <body>
   
-  <h2>Sup, nuCards bitch</h2>
+  <section class="navBar">
+    <div class="brand">
+      <a href="#"><span class="nuhome">nuHome</span></a>
+    </div><!--/ .brand -->
+    
+    <div class="mobileNav hidden-lg hidden-md">
+      <a href="#navWrap" data-toggle="collapse"><i class="material-icons md-light md-36" id="mobileNavController">menu</i></a>
+    </div><!--/ .mobileNav -->
+    
+    <div id="navWrap" class="collapse">
+      <div class="mainNav">
+        <ul>
+          <li class="active"><a href="#">Dashboard</a></li>
+          <li class=""><a href="#">nuCards</a></li>
+          <li class=""><a href="#">CPL</a></li>
+          <li class=""><a href="#">Hot Leads</a></li>
+          <li class=""><a href="#">Call Tracking</a></li>
+          <li class="divide">|</li>
+          <li class=""><a href="#">Support</a></li>
+          <li class=""><a href="#">Account</a></li>
+          <li class=""><a href="#">Log Out</a></li>
+        </ul>
+      </div><!--/ .mainNav -->
+
+      <div class="secondaryNav">
+        <ul>
+          <li class="active"><a href="#">Knowledge Base</a></li>
+          <li class=""><a href="#">Best Practices</a></li>
+          <li class=""><a href="#">FAQ</a></li>
+          <li class=""><a href="#">Contact</a></li>
+        </ul>
+      </div><!--/ .secondaryNav -->
+    </div><!--/ #navWrap -->
+  </section><!--/ .navBar -->
+  
+  <section class="hero hero-helper">
+    <div class="container">
+      <h2>Hopefully you find this helpful</h2>
+        <h4>We've got some helpful advice for you. Please use it to be more successful!</h4>
+          <p><a href="#" class="btn btn-default">Click here for advice</a></p>
+          <p><a href="#" class="dismiss">Dismiss this help box</a></p>
+    </div><!--/ .container -->
+  </section><!--/ .hero -->
+  
+  
+  
+  
+  <section class="page">
+    <div class="container">
+      
+      <h2 class="pageTitle">Dashboard<span>Protection Source <span>#100354</span></span></h2>
+      
+      <table class="table table-hover">
+        <div class="tableHeader">
+          <h4>Hot Leads</h4>
+          
+          <div class="tableControls">
+            <ul>
+              <li><a href="#" data-toggle="tooltip" data-placement="top" title="export as .csv"><i class="fa fa-file-text-o"></i> export list</a></li>
+              <li><a href="#" data-toggle="tooltip" data-placement="top" title="display settings"><i class="fa fa-cog"></i> settings</a></li>
+            </ul>
+          </div><!--/ .tableControls -->
+        </div><!--/ .tableHeader -->
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Username</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas iaculis egestas nibh, id posuere eros rutrum id. Nulla sit amet arcu quis nisi consectetur consequat eu a justo. Etiam in magna a velit tempus maximus. Morbi pulvinar turpis at odio hendrerit maximus. Nunc tristique rutrum sapien. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum gravida massa libero, congue sollicitudin purus luctus ut. Nunc consectetur risus non nulla volutpat, nec malesuada lectus mattis. Nunc venenatis venenatis accumsan. Morbi massa nibh, suscipit id laoreet et, ultricies eget tellus.</p>
+
+      <p>Praesent ac porttitor justo, eget pretium ante. Pellentesque sit amet pretium urna. Praesent odio felis, sodales ac dolor efficitur, faucibus tempor quam. Phasellus et ipsum sed quam finibus consequat varius eu purus. Quisque vitae faucibus ipsum, non dictum dolor. Quisque in finibus ante. Donec et ultrices lorem. Mauris eget lectus non justo lobortis fringilla. Donec porttitor varius metus, ut laoreet leo. Quisque malesuada gravida efficitur. Praesent ullamcorper porttitor purus, et vehicula lectus faucibus at. Mauris viverra nibh vel diam porttitor, quis mollis magna pharetra. Donec sed lacus quis arcu auctor dapibus. Pellentesque nulla tellus, dictum sit amet porttitor vitae, faucibus ac eros.</p>
+
+      <p>Nulla vel egestas leo. Nulla volutpat sapien a ligula imperdiet, non feugiat nisl aliquet. Praesent placerat auctor tortor, sed gravida metus sagittis a. Praesent porttitor arcu ut neque tempus, non faucibus nunc faucibus. Phasellus sit amet erat id ipsum venenatis vehicula. Curabitur vulputate urna erat, ac convallis ante imperdiet eu. Donec placerat nibh ac maximus pulvinar. Morbi sit amet tempor enim.</p>
+
+      <p>Ut maximus gravida augue, pretium cursus ligula sollicitudin in. Donec in convallis mi, in viverra purus. Sed ac egestas ex. Phasellus rutrum, diam sed volutpat dignissim, purus enim elementum nibh, ultricies accumsan dui ipsum ut ipsum. Suspendisse potenti. Phasellus sodales suscipit sem. Praesent at orci dolor. Aenean auctor eleifend aliquam. Ut non volutpat ligula.</p>
+      
+      <form>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputFile">File input</label>
+          <input type="file" id="exampleInputFile">
+          <p class="help-block">Example block-level help text here.</p>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox"> Check me out
+          </label>
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+
+      <p>Nullam quis libero in velit congue lacinia eget nec elit. Vivamus blandit bibendum dui sit amet vestibulum. Donec rutrum fringilla semper. Mauris venenatis fringilla posuere. Morbi ut pulvinar turpis, at sodales lectus. Nunc magna ligula, viverra ut mollis consectetur, faucibus a tellus. Curabitur elit magna, tempor a ipsum a, pellentesque dapibus risus. Quisque quis maximus enim. Proin placerat est a nisi condimentum mattis.</p>
+      
+    </div><!--/ .container -->
+  </section><!--/ .page -->
+  
+  
+  
+  
+  
+  
   
   
   
@@ -55,6 +206,7 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/chart.min.js"></script>
 <script src="assets/js/nuhome.js"></script>
 
 </body>
