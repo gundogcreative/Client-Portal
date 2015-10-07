@@ -39,7 +39,7 @@ Additional Font Icon Selection
 #####Includes:
 
 + assets/css/google-material-icons.css
-+ [inline] <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
++ [inline stylesheet] https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"
 
 
 ####ChartJs
@@ -59,7 +59,7 @@ Handles all graph/chart graphical interfaces
 + .navBar
   + .brand
   + .mobileNav
-  + .navWrap
+  + #navWrap
     + .mainNav
     + .secondaryNav
     
@@ -71,6 +71,15 @@ The .brand div holds the nuHome brand, designed with Google fonts (Maven Pro).
 
 ######.navBar > .mobileNav
 The .mobileNav is only visible on screen size < 991px. When clicked, it displays the appropriate navigation lists. The script for changing the icon (Google Material Icon) is located in nuhome.js.
+
+##### .navBar > \#navWrap
+\#navWrap holds both .mainNav & .secondaryNav. The reason to wrap both navigation lists within \#navWrap is for responsive menus. \#navWrap allows both menus to be hidden when window size < 991px.
+
+##### .navBar > \#navWrap > .mainNav
+.mainNav handles the top level navigation. All parent navigation elements are displayed within .mainNav.
+
+##### .navBar > \#navWrap > .secondaryNav
+.secondaryNav displays only when children pages exist. If no children pages exist, .secondaryNav is intended to be set as display:none;
 
 ####Known Issues
 
