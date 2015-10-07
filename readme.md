@@ -7,7 +7,7 @@ Yup.
 
 ###V0.1 Development
 
-Current Release: V0.1 2015-October
+Current Version: V0.1 2015-October
 
 
 ###Third-Party Dependencies
@@ -53,6 +53,7 @@ Handles all graph/chart graphical interfaces
 
 + assets/js/chart.min.js
 
+----
 
 ###Navigation Structure
 
@@ -64,7 +65,7 @@ Handles all graph/chart graphical interfaces
     + .secondaryNav
     
 ######.navBar
-The .navBar encompasses the entire structure of the navigation elements. It's the basic container that holds all of the required elements.
+The .navBar encompasses the entire structure of the navigation elements. It's the basic container that holds all of the required navigation bar elements.
 
 ######.navBar > .brand
 The .brand div holds the nuHome brand, designed with Google fonts (Maven Pro).
@@ -72,13 +73,13 @@ The .brand div holds the nuHome brand, designed with Google fonts (Maven Pro).
 ######.navBar > .mobileNav
 The .mobileNav is only visible on screen size < 991px. When clicked, it displays the appropriate navigation lists. The script for changing the icon (Google Material Icon) is located in nuhome.js.
 
-##### .navBar > \#navWrap
+###### .navBar > \#navWrap
 \#navWrap holds both .mainNav & .secondaryNav. The reason to wrap both navigation lists within \#navWrap is for responsive menus. \#navWrap allows both menus to be hidden when window size < 991px.
 
-##### .navBar > \#navWrap > .mainNav
+###### .navBar > \#navWrap > .mainNav
 .mainNav handles the top level navigation. All parent navigation elements are displayed within .mainNav.
 
-##### .navBar > \#navWrap > .secondaryNav
+###### .navBar > \#navWrap > .secondaryNav
 .secondaryNav displays only when children pages exist. If no children pages exist, .secondaryNav is intended to be set as display:none;
 
 ####Known Issues
