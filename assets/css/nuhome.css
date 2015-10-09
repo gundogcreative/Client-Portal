@@ -21,7 +21,7 @@
 1.0 -- Page Structure
 1.1 -- Navigation
 1.2 -- Hero
-1.3 -- Charts
+1.3 -- Cards & Charts
 
 2.0 -- Page Specific XXXXXXXX
 
@@ -158,19 +158,23 @@ section.page {padding:24px 0;}
 
 
 
-/* ----- 1.3 Charts ----- */
+/* ----- 1.3 Cards & Charts ----- */
 
-.chartCard {border:1px solid #e4e6ea;border-radius:2px;padding-bottom:12px;}
+.card {border:1px solid #e4e6ea;border-radius:3px;padding:12px;}
+.card h1, .card h2, .card h3, .card h4, .card h5, .card h6 {margin:0 0 12px;}
 
-.chartCard .chartLabels {}
-.chartCard .chartLabels .col-md-6:last-child {text-align:right;}
-.chartCard .chartLabels h4 {font-size:24px;}
-.chartCard .chartLabels h4 small {display:block;clear:both;font-size:55%;}
+.card.chart .chartLabels h4 {font-size:18px;font-weight:600;}
+.card.chart .chartLabels h4 small {display:block;clear:both;font-size:65%;font-weight:400;}
+.card.chart .chartLabels .figure {text-align:right;font-weight:bold;}
 
-#barChart {max-height:450px;}
 canvas {width:100%!important;height:auto!important;}
 
-#barChart canvas {max-height:240px;}
+#barChart canvas {max-height:220px;min-height:180px;}
+#lineChart canvas {max-height:320px;min-height:180px;}
+
+@media (max-width: 991px) and (min-width: 768px) {
+  #barChart canvas, #lineChart canvas {height:150px!important;min-height:150px;max-height:150px;}
+}
 
 
 
