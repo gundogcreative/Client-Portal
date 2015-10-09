@@ -21,6 +21,7 @@
 1.0 -- Page Structure
 1.1 -- Navigation
 1.2 -- Hero
+1.3 -- Charts
 
 2.0 -- Page Specific XXXXXXXX
 
@@ -40,7 +41,7 @@ body {font-family:'Open Sans', sans-serif;font-weight:400;color:#35373d;}
 
 /* ----- 0.2 Typography ----- */
 
-.nuhome {font-family:'Maven Pro', Arial, sans-serif;font-weight:500;letter-spacing:-.07em;}
+.nuhome {font-family:'Maven Pro', Arial, sans-serif;font-weight:700;letter-spacing:-.07em;}
 
 h1 {}
 p {color:#737a84;}
@@ -54,7 +55,7 @@ p {color:#737a84;}
 
 .tableHeader {}
 
-.tableHeader h4 {display:inline-block;text-transform:uppercase;color:#3776bc;font-weight:bold;}
+.tableHeader h4 {display:inline-block;color:#c9ccd2;font-weight:600;}
 
 .tableHeader .tableControls {float:right;margin:9px 0 0;}
 .tableHeader .tableControls ul {margin:0;padding:0;}
@@ -63,6 +64,9 @@ p {color:#737a84;}
 .tableHeader .tableControls ul li a i {}
 .tableHeader .tableControls ul li a:hover {text-decoration:none;}
 .tableHeader .tableControls ul li a:hover i {}
+
+.table thead {color:#35373d;}
+.table tbody {color:#737a84;}
 
 
 
@@ -80,7 +84,8 @@ section.page {padding:24px 0;}
 
 /* ----- 1.1 Navigation ----- */
 
-.navBar {display:inline-block;width:100%;height:auto;padding:0;background-color:#3776bc;}
+.navBar {display:inline-block;width:100%;height:auto;padding:0;background:#3776bc;
+}
 
 .navBar .brand {float:left;margin:11px 0 12px 15px;position:absolute;top:0;left:0;}
 .navBar .brand a {}
@@ -88,7 +93,7 @@ section.page {padding:24px 0;}
 .navBar .brand a span {color:#fff;font-size:32px;}
 
 .navBar .mobileNav {display:inline-block;width:100%;text-align:right;margin:15px 0 12px;}
-.navBar .mobileNav a {display:block;margin-right:15px;}
+.navBar .mobileNav a {display:inline-block;margin-right:15px;}
 
 .navBar #navWrap {}
 
@@ -102,31 +107,41 @@ section.page {padding:24px 0;}
 .navBar .mainNav ul li a:hover {color:#fff;}
 .navBar .mainNav ul li.active a:hover {}
 
-.navBar .secondaryNav {display:inline-block;width:100%;background-color:#c9ccd2;margin:0;padding:0;height:auto;}
+.navBar .secondaryNav {display:inline-block;width:100%;background-color:#e4e6ea;margin:0;padding:0;height:auto;}
 .navBar .secondaryNav ul {margin:0;padding:21px 0;width:100%;text-align:center;}
 .navBar .secondaryNav ul li {display:inline-block;font-size:15px;margin:0 9px;}
 .navBar .secondaryNav ul li.active {}
 .navBar .secondaryNav ul li a {color:#737a84;}
-.navBar .secondaryNav ul li.active a {color:#35373d;font-weight:600;border-bottom:4px solid #A5A7AA;padding-bottom:18px;}
+.navBar .secondaryNav ul li.active a {color:#35373d;font-weight:600;border-bottom:4px solid #c9ccd2;padding-bottom:18px;}
 .navBar .secondaryNav ul li a:hover {}
 .navBar .secondaryNav ul li.active a:hover {text-decoration:none;}
 
 @media (max-width: 991px) {  
+  .navBar .brand {float:left;margin:11px 0 11px 15px;}
+  .navBar .brand a span {color:#fff;font-size:26px;}
+  
+  .navBar .mobileNav {margin:11px 0 8px;}
+  
   .navBar #navWrap {clear:both;width:100%;}
   
-  .navBar .mainNav {display:block;width:100%;clear:both;margin:0;padding:15px 0;background-color:rgba(0,0,0,0.1);}
-  .navBar .mainNav ul {text-align:center;}
-  .navBar .mainNav ul li {display:block;clear:both;margin:0;margin-bottom:10px;font-size:18px;}
+  .navBar .mainNav {display:block;width:100%;clear:both;margin:0;padding:0;background-color:rgba(0,0,0,0.1);}
+  .navBar .mainNav ul {text-align:left;margin:0;}
+  .navBar .mainNav ul li {display:block;clear:both;margin:0;font-size:15px;border-bottom:1px solid rgba(0,0,0,0.1);}
   .navBar .mainNav ul li:last-child {}
+  .navBar .mainNav ul li.active {}
+  .navBar .mainNav ul li.active a {text-decoration:none;}
   .navBar .mainNav ul li.divide {display:none;}
+  .navBar .mainNav ul li a {width:100%;display:block;padding:8px 0 8px 12px;}
+  .navBar .mainNav ul li a:hover {background-color:rgba(0,0,0,0.1);text-decoration:none;}
   
   .navBar .secondaryNav {}
-  .navBar .secondaryNav ul {padding:15px 0;}
-  .navBar .secondaryNav ul li {display:block;clear:both;margin:0;margin-bottom:10px;font-size:18px;}
-  .navBar .secondaryNav ul li:last-child {margin-bottom:0;}
-  .navBar .secondaryNav ul li a {}
-  .navBar .secondaryNav ul li.active a {border:none;padding:0;text-decoration:underline;}
-  .navBar .secondaryNav ul li.active a:hover {text-decoration:underline;}
+  .navBar .secondaryNav ul {padding:0;margin:0;text-align:left;}
+  .navBar .secondaryNav ul li {display:block;clear:both;margin:0;font-size:15px;border-bottom:1px solid rgba(0,0,0,0.05);}
+  .navBar .secondaryNav ul li:last-child {margin-bottom:0;border-bottom:none;}
+  .navBar .secondaryNav ul li a {width:100%;display:block;padding:8px 0 8px 12px;}
+  .navBar .secondaryNav ul li a:hover {text-decoration:none;background-color:rgba(0,0,0,0.05);}
+  .navBar .secondaryNav ul li.active a {border-bottom:none;padding:8px 0 8px 12px;margin:0;text-decoration:none;}
+  .navBar .secondaryNav ul li.active a:hover {text-decoration:none;}
 }
 
 
@@ -134,11 +149,28 @@ section.page {padding:24px 0;}
 
 /* ----- 1.2 Hero ----- */
 
-.hero {padding:80px 0px;DISPLAY:;background-color:rgba(201,204,210,0.45);}
+.hero {DISPLAY:NONE;padding:80px 0px;background-color:rgba(201,204,210,0.45);}
 
 .hero-helper {position:relative;padding:40px 0;}
 .hero-helper .container {padding-top:40px;padding-bottom:40px;}
 .hero-helper .container a.dismiss {font-size:12px;}
+
+
+
+
+/* ----- 1.3 Charts ----- */
+
+.chartCard {border:1px solid #e4e6ea;border-radius:2px;padding-bottom:12px;}
+
+.chartCard .chartLabels {}
+.chartCard .chartLabels .col-md-6:last-child {text-align:right;}
+.chartCard .chartLabels h4 {font-size:24px;}
+.chartCard .chartLabels h4 small {display:block;clear:both;font-size:55%;}
+
+#barChart {max-height:450px;}
+canvas {width:100%!important;height:auto!important;}
+
+#barChart canvas {max-height:240px;}
 
 
 

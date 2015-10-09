@@ -8,7 +8,7 @@ $(document).ready(function() {
 
 // On Browser Window Resize Add/Remove Collapse Class to Navigation Wrapper
 window.onresize = function() {
-  if (window.innerWidth >= 991) {
+  if (window.innerWidth >= 992) {
     $('#navWrap').removeClass('collapse');
   } else if (window.innerWidth <= 991) {
     $('#navWrap').addClass('collapse');
