@@ -35,7 +35,7 @@
 /* ----- 0.1 -- Base HTML ----- */
 
 html {}
-body {font-family:'Open Sans', sans-serif;font-weight:400;color:#35373d;}
+body {font-family:'Open Sans', sans-serif;font-weight:400;font-size:13px;color:#35373d;}
 
 
 
@@ -45,7 +45,15 @@ body {font-family:'Open Sans', sans-serif;font-weight:400;color:#35373d;}
 .nuhome {font-family:'Maven Pro', Arial, sans-serif;font-weight:700;letter-spacing:-.07em;}
 
 h1 {}
+h2 {}
+h3 {}
+h4 {}
+h5 {}
+h6 {}
+
 p {color:#737a84;}
+
+.tooltip {white-space:nowrap;}
 
 
 
@@ -75,35 +83,35 @@ p {color:#737a84;}
 /* DEFAULT-LINE BUTTON */
 .btn-default-line {
   background-color:transparent;
-  border-color:#c9ccd2;
-  color:#c9ccd2;
+  border-color:#3776bc;
+  color:#3776bc;
 }
 .btn-default-line:hover, .btn-default-line:focus, .btn-default-line:active, .btn-default-line.active, .btn-default-line.active.focus, .btn-default-line.active:focus, .btn-default-line.active:hover, .btn-default-line:active.focus, .btn-default-line:active:focus, .btn-default-line:active:hover, .open>.dropdown-toggle.btn-default-line.focus, .open>.dropdown-toggle.btn-default-line:focus, .open>.dropdown-toggle.btn-default-line:hover {
-  background-color: transparent;
-  border-color: #747b85;
-  color:#747b85;
+  background-color: #3776bc;
+  border-color: #3776bc;
+  color:#fff;
 }
 .btn-default-line.disabled:hover, .btn-default-line.disabled:focus, .btn-default-line.disabled:active, .btn-default-line.disabled.active, .btn-default-line[disabled]:hover, .btn-default-line[disabled]:focus, .btn-default-line[disabled]:active, .btn-default-line[disabled].active, fieldset[disabled] .btn-default-line:hover, fieldset[disabled] .btn-default-line:focus, fieldset[disabled] .btn-default-line:active, fieldset[disabled] .btn-default-line.active {
-  background-color: transparent;
-  border-color: #c9ccd2;
-  color:#c9ccd2;
+  background-color: #316aa8;
+  border-color: #2b5d95;
+  color:#fff;
 }
 
 /* GREY BUTTON */
 .btn-grey {
-  background-color: #e4e6ea;
-  border-color: #e4e6ea;
-  color:#b2b4b7;
+  background-color: rgba(201,204,210,0.25);
+  border-color: rgba(201,204,210,0.25);
+  color: rgba(116,123,133,0.5);
 }
 .btn-grey:hover, .btn-grey:focus, .btn-grey:active, .btn-grey.active, .btn-grey.active.focus, .btn-grey.active:focus, .btn-grey.active:hover, .btn-grey:active.focus, .btn-grey:active:focus, .btn-grey:active:hover, .open>.dropdown-toggle.btn-grey.focus, .open>.dropdown-toggle.btn-grey:focus, .open>.dropdown-toggle.btn-grey:hover {
-  background-color: #b2b4b7;
-  border-color: #b2b4b7;
-  color:#fff;
+  background-color: rgba(201,204,210,0.75);
+  border-color: rgba(201,204,210,0.75);
+  color: rgba(116,123,133,1.0);
 }
 .btn-grey.disabled:hover, .btn-grey.disabled:focus, .btn-grey.disabled:active, .btn-grey.disabled.active, .btn-grey[disabled]:hover, .btn-grey[disabled]:focus, .btn-grey[disabled]:active, .btn-grey[disabled].active, fieldset[disabled] .btn-grey:hover, fieldset[disabled] .btn-grey:focus, fieldset[disabled] .btn-grey:active, fieldset[disabled] .btn-grey.active {
-  background-color: #e4e6ea;
-  border-color: #e4e6ea;
-  color:#b2b4b7;
+  background-color: rgba(201,204,210,0.75);
+  border-color: rgba(201,204,210,0.75);
+  color: rgba(116,123,133,1.0);
 }
 
 
@@ -111,37 +119,37 @@ p {color:#737a84;}
 
 /* ----- 0.5 Tables ----- */
 
-.tableHeader {display:block;width:100%;clear:both;margin:16px 0;}
+.tableHeader {display:block;width:100%;clear:both;margin:12px 0;}
 
-.tableHeader .tableTitle {display:inline-block;color:#c9ccd2;font-weight:600;margin:10px 0;}
+.tableHeader .tableTitle {display:inline-block;color:#3776bc;font-weight:600;margin:10px 0;}
 
-.tableHeader .tableControls {float:right;margin:4px 0;}
+.tableHeader .tableControls {float:right;margin:9px 0;}
 .tableHeader .tableControls > ul {margin:0;padding:0;}
-.tableHeader .tableControls > ul > li {display:inline;font-size:13px;margin-left:4px;}
-.tableHeader .tableControls > ul > li > a {}
-.tableHeader .tableControls > ul > li > a.btn {}
-.tableHeader .tableControls > ul > li > a.btn i {margin-left:4px;}
-.tableHeader .tableControls > ul > li > a i {}
-.tableHeader .tableControls > ul > li > a:hover {text-decoration:none;}
+.tableHeader .tableControls > ul > li {display:inline;font-size:13px;margin-left:20px;}
+.tableHeader .tableControls > ul > li > a {color:#c9ccd2;}
+.tableHeader .tableControls > ul > li > a i {margin-left:2px;}
+.tableHeader .tableControls > ul > li > a:hover {text-decoration:none;color:#747b85;}
+.tableHeader .tableControls > ul > li > a:focus {text-decoration:none;}
 .tableHeader .tableControls > ul > li > a:hover i {}
 
-@media (max-width: 480px) {
-  .tableHeader .tableTitle {display:block;text-align:center;border-bottom:1px solid #e4e6ea;padding-bottom:10px;}
-  .tableHeader .tableControls {display:block;float:none;}
-  .tableHeader .tableControls > ul > li {display:block;margin-bottom:1px;}
-  .tableHeader .tableControls > ul > li > a.btn {width:100%;border-radius:0;-webkit-border-radius:0;}
-  .tableHeader .tableControls > ul > li:first-child > a.btn {border-radius:3px 3px 0 0;-webkit-border-radius:3px 3px 0 0;}
-  .tableHeader .tableControls > ul > li:last-child > a.btn {border-radius:0 0 3px 3px;-webkit-border-radius:0 0 3px 3px;}
+@media (max-width: 640px) {
+  .tableHeader .tableTitle {display:block;}
+  .tableHeader .tableControls {display:block;float:none;margin:7px 0;}
+  .tableHeader .tableControls > ul > li {font-size:18px;margin-left:14px;}
+  .tableHeader .tableControls > ul > li:first-child {margin:0;}
+  .tableHeader .tableControls > ul > li > a > span {display:none;}
 }
 
 .table {}
 
-.table > thead {color:#747b85;background-color:#e4e6ea;}
+.table > thead {color:#747b85;}
 .table > thead > tr {}
-.table > thead > tr > th {border:none;}
+.table > thead > tr > th {border-color:#e4e6ea;}
 
 .table > tbody {color:#737a84;}
-.table > tbody > tr > td {border-color:#e4e6ea;}
+.table > tbody > tr:first-child > td {}
+.table > tbody > tr > td {border-color:#e4e6ea;padding:8px;vertical-align:middle;}
+
 
 .table-hover > tbody > tr:hover {background-color:#f7f9fc;}
 
@@ -154,7 +162,12 @@ p {color:#737a84;}
 
 /* ----- 0.6 Dropdowns ----- */
 
-.dropdown ul {background-color:#ff3333;}
+.dropdown ul {}
+
+.dropdown-menu {font-size:12px;border-radius:3px;}
+.dropdown-menu.fold-left {right:0;left:auto;}
+
+.dropdown-menu > .active > a, .dropdown-menu > .active >a:focus, .dropdown-menu > .active > a:hover {background-color:#3776bc;}
 
 
 
