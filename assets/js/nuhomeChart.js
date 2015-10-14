@@ -28,6 +28,22 @@ var lineData = {
   ]
 };
 
+var lineData2 = {
+  labels: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+  datasets: [
+    {
+      label: "Calls Past 7 Days",
+      fillColor: "rgba(220,220,220,0.4)",
+      strokeColor: "rgba(55,118,187,1)",
+      pointColor: "rgba(55,118,187,1)",
+      pointStrokeColor: "#fff",
+      pointHighlightFill: "#fff",
+      pointHighlightStroke: "rgba(55,118,187,1)",
+      data: [4, 5, 9, 6, 4, 5, 1]
+    }
+  ]
+};
+
 var donutData = [
     {
         value: 300,
@@ -68,6 +84,7 @@ var donutData = [
 var ctx1 = document.getElementById("myBarChart").getContext("2d");
 var ctx2 = document.getElementById("myLineChart").getContext("2d");
 var ctx3 = document.getElementById("myDonutChart").getContext("2d");
+var ctx4 = document.getElementById("myLineChart2").getContext("2d");
 
 Chart.defaults.global.responsive = true;
 Chart.defaults.global.maintainAspectRation = true;
@@ -105,6 +122,15 @@ var myLineChart = new Chart(ctx2).Line(lineData, {
 
 var myDonutChart = new Chart(ctx3).Doughnut(donutData, {
   animateScale : true,
+});
+
+
+var myLineChart2 = new Chart(ctx4).Line(lineData2, {
+  bezierCurve : true,
+  scaleBeginAtZero: true,
+  pointDotRadius : 5,
+  pointDotStrokeWidth : 2,
+  pointHitDetectionRadius : 5
 });
 
 
