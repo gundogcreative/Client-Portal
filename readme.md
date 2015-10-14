@@ -53,6 +53,18 @@ Handles all graph/chart graphical interfaces
 
 + assets/js/chart.min.js
 
+####Slick.js
+
+*Version Installed: 1.5.8*
+[http://chartjs.org/](http://chartjs.org/)
+
+Utilized for card chart responsive displays
+
+#####Includes:
+
++ assets/css/slick.css
++ assets/js/slick.min.js
+
 ----
 
 ###Navigation Structure

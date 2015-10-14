@@ -267,18 +267,20 @@ section.page {padding:24px 0;}
   .card {margin:0 0 15px;}
 }
 
+.responsiveCards {display:flex;display:-webkit-flex;flex-flow:row wrap}
+.responsiveCards .card {flex:1 auto;margin:8px;}
+
+@media (min-width: 991px) {
+  .responsiveCards .card {flex:3 0px;}
+}
+
+
 .card.chart .chartLabels h4 {font-size:18px;font-weight:600;}
 .card.chart .chartLabels h4 small {display:block;clear:both;font-size:65%;font-weight:400;}
 .card.chart .chartLabels .figure {text-align:right;font-weight:bold;}
 
 canvas {width:100%!important;height:auto!important;}
 
-#barChart canvas {max-height:220px;min-height:180px;}
-#lineChart canvas {max-height:320px;min-height:180px;}
-
-@media (max-width: 991px) and (min-width: 768px) {
-  #barChart canvas, #lineChart canvas {height:120px!important;min-height:120px;max-height:120px;}
-}
 
 
 
