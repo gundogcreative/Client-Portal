@@ -28,10 +28,46 @@ var lineData = {
   ]
 };
 
+var donutData = [
+    {
+        value: 300,
+        color:"#F7464A",
+        highlight: "#FF5A5E",
+        label: "1-7 Days",
+        labelColor : 'white',
+        labelFontSize : '16'
+    },
+    {
+        value: 50,
+        color: "#46BFBD",
+        highlight: "#5AD3D1",
+        label: "8-15 Days",
+        labelColor : 'white',
+        labelFontSize : '16'
+    },
+    {
+        value: 100,
+        color: "#FDB45C",
+        highlight: "#FFC870",
+        label: "16-30 Days",
+        labelColor : 'white',
+        labelFontSize : '16'
+    },
+    {
+        value: 300,
+        color: "#3776bc",
+        highlight: "#3776ab",
+        label: "31+ Days",
+        labelColor : 'white',
+        labelFontSize : '16'
+    }
+]
 
 
-var ctx = document.getElementById("myBarChart").getContext("2d");
+
+var ctx1 = document.getElementById("myBarChart").getContext("2d");
 var ctx2 = document.getElementById("myLineChart").getContext("2d");
+var ctx3 = document.getElementById("myDonutChart").getContext("2d");
 
 Chart.defaults.global.responsive = true;
 Chart.defaults.global.maintainAspectRation = true;
@@ -44,7 +80,7 @@ Chart.defaults.global.tooltipFontFamily = 'Open Sans';
 
 
 // BAR CHART
-var myBarChart = new Chart(ctx).Bar(barData, {
+var myBarChart = new Chart(ctx1).Bar(barData, {
   scaleBeginAtZero : true,
   scaleShowGridLines : true,
   scaleGridLineColor : "rgba(0,0,0,.05)",
@@ -63,7 +99,12 @@ var myLineChart = new Chart(ctx2).Line(lineData, {
   scaleBeginAtZero: true,
   pointDotRadius : 5,
   pointDotStrokeWidth : 2,
-  pointHitDetectionRadius : 10
+  pointHitDetectionRadius : 5
+});
+
+
+var myDonutChart = new Chart(ctx3).Doughnut(donutData, {
+  animateScale : true,
 });
 
 

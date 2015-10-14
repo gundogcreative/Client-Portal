@@ -15,8 +15,9 @@
 0.1 -- Base HTML
 0.2 -- Typography
 0.3 -- Forms
-0.4 -- 
+0.4 -- Buttons
 0.5 -- Tables
+0.6 -- Dropdowns
 
 1.0 -- Page Structure
 1.1 -- Navigation
@@ -49,24 +50,111 @@ p {color:#737a84;}
 
 
 
+/* ----- 0.4 Buttons ----- */
+
+.btn {border-radius:2px;-webkit-border-radius:2px;}
+
+/* DEFAULT BUTTON */
+.btn-default {
+  background-color: #3776bc;
+  border-color: #3776bc;
+  color:#fafafa;
+}
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .btn-default.active.focus, .btn-default.active:focus, .btn-default.active:hover, .btn-default:active.focus, .btn-default:active:focus, .btn-default:active:hover, .open>.dropdown-toggle.btn-default.focus, .open>.dropdown-toggle.btn-default:focus, .open>.dropdown-toggle.btn-default:hover {
+  background-color: #316aa8;
+  border-color: #2b5d95;
+  color:#fff;
+}
+.btn-default.disabled:hover, .btn-default.disabled:focus, .btn-default.disabled:active, .btn-default.disabled.active, .btn-default[disabled]:hover, .btn-default[disabled]:focus, .btn-default[disabled]:active, .btn-default[disabled].active, fieldset[disabled] .btn-default:hover, fieldset[disabled] .btn-default:focus, fieldset[disabled] .btn-default:active, fieldset[disabled] .btn-default.active {
+  background-color: #3776bc;
+  border-color: #3776bc;
+  color:#efefef;
+}
+
+
+/* DEFAULT-LINE BUTTON */
+.btn-default-line {
+  background-color:transparent;
+  border-color:#c9ccd2;
+  color:#c9ccd2;
+}
+.btn-default-line:hover, .btn-default-line:focus, .btn-default-line:active, .btn-default-line.active, .btn-default-line.active.focus, .btn-default-line.active:focus, .btn-default-line.active:hover, .btn-default-line:active.focus, .btn-default-line:active:focus, .btn-default-line:active:hover, .open>.dropdown-toggle.btn-default-line.focus, .open>.dropdown-toggle.btn-default-line:focus, .open>.dropdown-toggle.btn-default-line:hover {
+  background-color: transparent;
+  border-color: #747b85;
+  color:#747b85;
+}
+.btn-default-line.disabled:hover, .btn-default-line.disabled:focus, .btn-default-line.disabled:active, .btn-default-line.disabled.active, .btn-default-line[disabled]:hover, .btn-default-line[disabled]:focus, .btn-default-line[disabled]:active, .btn-default-line[disabled].active, fieldset[disabled] .btn-default-line:hover, fieldset[disabled] .btn-default-line:focus, fieldset[disabled] .btn-default-line:active, fieldset[disabled] .btn-default-line.active {
+  background-color: transparent;
+  border-color: #c9ccd2;
+  color:#c9ccd2;
+}
+
+/* GREY BUTTON */
+.btn-grey {
+  background-color: #e4e6ea;
+  border-color: #e4e6ea;
+  color:#b2b4b7;
+}
+.btn-grey:hover, .btn-grey:focus, .btn-grey:active, .btn-grey.active, .btn-grey.active.focus, .btn-grey.active:focus, .btn-grey.active:hover, .btn-grey:active.focus, .btn-grey:active:focus, .btn-grey:active:hover, .open>.dropdown-toggle.btn-grey.focus, .open>.dropdown-toggle.btn-grey:focus, .open>.dropdown-toggle.btn-grey:hover {
+  background-color: #b2b4b7;
+  border-color: #b2b4b7;
+  color:#fff;
+}
+.btn-grey.disabled:hover, .btn-grey.disabled:focus, .btn-grey.disabled:active, .btn-grey.disabled.active, .btn-grey[disabled]:hover, .btn-grey[disabled]:focus, .btn-grey[disabled]:active, .btn-grey[disabled].active, fieldset[disabled] .btn-grey:hover, fieldset[disabled] .btn-grey:focus, fieldset[disabled] .btn-grey:active, fieldset[disabled] .btn-grey.active {
+  background-color: #e4e6ea;
+  border-color: #e4e6ea;
+  color:#b2b4b7;
+}
+
+
+
+
 /* ----- 0.5 Tables ----- */
+
+.tableHeader {display:block;width:100%;clear:both;margin:16px 0;}
+
+.tableHeader .tableTitle {display:inline-block;color:#c9ccd2;font-weight:600;margin:10px 0;}
+
+.tableHeader .tableControls {float:right;margin:4px 0;}
+.tableHeader .tableControls > ul {margin:0;padding:0;}
+.tableHeader .tableControls > ul > li {display:inline;font-size:13px;margin-left:4px;}
+.tableHeader .tableControls > ul > li > a {}
+.tableHeader .tableControls > ul > li > a.btn {}
+.tableHeader .tableControls > ul > li > a.btn i {margin-left:4px;}
+.tableHeader .tableControls > ul > li > a i {}
+.tableHeader .tableControls > ul > li > a:hover {text-decoration:none;}
+.tableHeader .tableControls > ul > li > a:hover i {}
+
+@media (max-width: 480px) {
+  .tableHeader .tableTitle {display:block;text-align:center;border-bottom:1px solid #e4e6ea;padding-bottom:10px;}
+  .tableHeader .tableControls {display:block;float:none;}
+  .tableHeader .tableControls > ul > li {display:block;margin-bottom:1px;}
+  .tableHeader .tableControls > ul > li > a.btn {width:100%;border-radius:0;-webkit-border-radius:0;}
+  .tableHeader .tableControls > ul > li:first-child > a.btn {border-radius:3px 3px 0 0;-webkit-border-radius:3px 3px 0 0;}
+  .tableHeader .tableControls > ul > li:last-child > a.btn {border-radius:0 0 3px 3px;-webkit-border-radius:0 0 3px 3px;}
+}
 
 .table {}
 
-.tableHeader {}
+.table > thead {color:#747b85;background-color:#e4e6ea;}
+.table > thead > tr {}
+.table > thead > tr > th {border:none;}
 
-.tableHeader h4 {display:inline-block;color:#c9ccd2;font-weight:600;}
+.table > tbody {color:#737a84;}
+.table > tbody > tr > td {border-color:#e4e6ea;}
 
-.tableHeader .tableControls {float:right;margin:9px 0 0;}
-.tableHeader .tableControls ul {margin:0;padding:0;}
-.tableHeader .tableControls ul li {display:inline;font-size:13px;margin-left:16px;}
-.tableHeader .tableControls ul li a {}
-.tableHeader .tableControls ul li a i {}
-.tableHeader .tableControls ul li a:hover {text-decoration:none;}
-.tableHeader .tableControls ul li a:hover i {}
+.table-hover > tbody > tr:hover {background-color:#f7f9fc;}
 
-.table thead {color:#35373d;}
-.table tbody {color:#737a84;}
+@media (max-width: 991px) {
+  .table-responsive {border:none;}
+}
+
+
+
+
+/* ----- 0.6 Dropdowns ----- */
+
+.dropdown ul {background-color:#ff3333;}
 
 
 
@@ -108,11 +196,11 @@ section.page {padding:24px 0;}
 .navBar .mainNav ul li.active a:hover {}
 
 .navBar .secondaryNav {display:inline-block;width:100%;background-color:#e4e6ea;margin:0;padding:0;height:auto;}
-.navBar .secondaryNav ul {margin:0;padding:21px 0;width:100%;text-align:center;}
+.navBar .secondaryNav ul {margin:0;padding:17px 0 18px;width:100%;text-align:center;}
 .navBar .secondaryNav ul li {display:inline-block;font-size:15px;margin:0 9px;}
 .navBar .secondaryNav ul li.active {}
 .navBar .secondaryNav ul li a {color:#737a84;}
-.navBar .secondaryNav ul li.active a {color:#35373d;font-weight:600;border-bottom:4px solid #c9ccd2;padding-bottom:18px;}
+.navBar .secondaryNav ul li.active a {color:#35373d;font-weight:600;border-bottom:4px solid #c9ccd2;padding-bottom:15px;}
 .navBar .secondaryNav ul li a:hover {}
 .navBar .secondaryNav ul li.active a:hover {text-decoration:none;}
 
@@ -131,15 +219,15 @@ section.page {padding:24px 0;}
   .navBar .mainNav ul li.active {}
   .navBar .mainNav ul li.active a {text-decoration:none;border-left:4px solid rgba(0,0,0,.2);}
   .navBar .mainNav ul li.divide {display:none;}
-  .navBar .mainNav ul li a {width:100%;display:block;padding:8px 0 8px 12px;}
+  .navBar .mainNav ul li a {width:100%;display:block;padding:12px 0 12px 12px;}
   .navBar .mainNav ul li a:hover {background-color:rgba(0,0,0,0.1);text-decoration:none;}
   
   .navBar .secondaryNav {}
   .navBar .secondaryNav ul {padding:0;margin:0;text-align:left;}
   .navBar .secondaryNav ul li {display:block;clear:both;margin:0;font-size:15px;border-bottom:1px solid rgba(0,0,0,0.05);}
-  .navBar .secondaryNav ul li a {width:100%;display:block;padding:8px 0 8px 12px;}
+  .navBar .secondaryNav ul li a {width:100%;display:block;padding:12px 0 12px 12px;}
   .navBar .secondaryNav ul li a:hover {text-decoration:none;background-color:rgba(0,0,0,0.05);}
-  .navBar .secondaryNav ul li.active a {border-bottom:none;padding:8px 0 8px 12px;margin:0;text-decoration:none;border-left:4px solid rgba(0,0,0,.2);}
+  .navBar .secondaryNav ul li.active a {border-bottom:none;padding:12px 0 12px 12px;margin:0;text-decoration:none;border-left:4px solid rgba(0,0,0,.2);}
   .navBar .secondaryNav ul li.active a:hover {text-decoration:none;}
 }
 
@@ -176,7 +264,7 @@ canvas {width:100%!important;height:auto!important;}
 #lineChart canvas {max-height:320px;min-height:180px;}
 
 @media (max-width: 991px) and (min-width: 768px) {
-  #barChart canvas, #lineChart canvas {height:150px!important;min-height:150px;max-height:150px;}
+  #barChart canvas, #lineChart canvas {height:120px!important;min-height:120px;max-height:120px;}
 }
 
 

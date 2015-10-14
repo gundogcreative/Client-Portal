@@ -131,67 +131,295 @@
             </div>
           </div><!--/ .card .chart -->
         </div><!--/ .col-md-4 -->
+        
+        
+        <div class="col-sm-4">  
+          <div class="card chart">
+            <div class="chartLabels">
+              <div class="row">
+                <div class="col-xs-8">
+                  <h4>Average Response Time<small>All Time</small></h4>
+                </div><!--/ .col-md-8 -->
+
+                <div class="col-xs-4">
+                  <h3 class="figure">&nbsp;</h3>
+                </div><!--/ .col-md-4 -->
+              </div><!--/ .row -->
+            </div><!--/ .chartLabels -->
+
+            <div id="donutChart">
+              <canvas id="myDonutChart"></canvas>
+            </div>
+          </div><!--/ .card .chart -->
+        </div><!--/ .col-md-4 -->
       </div><!--/ .row -->
       
       
-      <table class="table table-hover">
-        <div class="tableHeader">
-          <h4>Hot Leads</h4>
-          
-          <div class="tableControls">
-            <ul>
-              <li><a href="#" data-toggle="tooltip" data-placement="top" title="export as .csv"><i class="fa fa-file-text-o"></i> export list</a></li>
-              <li><a href="#" data-toggle="tooltip" data-placement="top" title="display settings"><i class="fa fa-cog"></i> settings</a></li>
-            </ul>
-          </div><!--/ .tableControls -->
-        </div><!--/ .tableHeader -->
+      <div class="tableHeader" id="">
+        <h4 class="tableTitle">Deliveries</h4>
+
+        <div class="tableControls">
+          <ul>
+            <li class="dropdown">
+              <a href="javascript:void(0);" class="btn btn-default-line btn-sm" data-toggle="dropdown">Sort By <i class="fa fa-exchange"></i></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Delivery Date (Newest to Oldest)</a></li>
+                  <li><a href="#">Delivery Date (Oldest to Newest)</a></li>
+                  <li><a href="#">Account Name (A to Z)</a></li>
+                  <li><a href="#">Account Name (Z to A)</a></li>
+                  <li><a href="#">City (A to Z)</a></li>
+                  <li><a href="#">City (Z to A)</a></li>
+                </ul>
+            </li>
+            <li><a href="#" class="btn btn-default-line btn-sm">Export <i class="fa fa-download"></i></a></li>
+            <li><a href="#" class="btn btn-default-line btn-sm">Print <i class="fa fa-print"></i></a></li>
+            <li><a href="#" class="btn btn-default-line btn-sm">Settings <i class="fa fa-cog"></i></a></li>
+          </ul>
+        </div><!--/ .tableControls -->
+      </div><!--/ .tableHeader -->
+      
+      <div class="table-responsive">
+      <table class="table table-hover" id="">
         <thead>
           <tr>
-            <th>#</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Username</th>
+            <th>Account Name</th>
+            <th>Card Number</th>
+            <th>Delivery Date</th>
+            <th>Street Address</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Zip Code</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
+            <td>SANDRA BENNETT</td>
+            <td>6202 0331 0015 1264</td>
+            <td>10/14/2015</td>
+            <td>1062 E Saddle Way</td>
+            <td>San Tan Valley</td>
+            <td>AZ</td>
+            <td>85143</td>
           </tr>
           <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
+            <td>JIM CHAPIN</td>
+            <td>6202 0331 0015 1303</td>
+            <td>10/14/2015</td>
+            <td>671 E Blossom Rd</td>
+            <td>San Tan Valley</td>
+            <td>AZ</td>
+            <td>85143</td>
           </tr>
           <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
+            <td>JOSE PORTO</td>
+            <td>6202 0331 0015 1227</td>
+            <td>10/14/2015</td>
+            <td>3888 E Mine Shaft Rd</td>
+            <td>San Tan Valley</td>
+            <td>AZ</td>
+            <td>85143</td>
           </tr>
           <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
+            <td>JONATHAN &amp; STACEE SCHUBERT</td>
+            <td>6202 0331 0015 1244</td>
+            <td>10/14/2015</td>
+            <td>5026 E Sunstone Dr</td>
+            <td>San Tan Valley</td>
+            <td>AZ</td>
+            <td>85143</td>
           </tr>
           <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
+            <td>ROBERT LOPEZ</td>
+            <td>6200 0333 0012 0274</td>
+            <td>10/14/2015</td>
+            <td>20988 W Sunrise Ln</td>
+            <td>Buckeye</td>
+            <td>AZ</td>
+            <td>85396</td>
           </tr>
           <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
+            <td>DONALD &amp; JACQUELINE CURRY</td>
+            <td>6200 0333 0012 0359</td>
+            <td>10/14/2015</td>
+            <td>20897 W Edith Way</td>
+            <td>Buckeye</td>
+            <td>AZ</td>
+            <td>85396</td>
+          </tr>
+          <tr>
+            <td>NICHOLAS NEWBERRY</td>
+            <td>6202 0229 0011 0379</td>
+            <td>10/14/2015</td>
+            <td>2684 E Remington Pl</td>
+            <td>Chandler</td>
+            <td>AZ</td>
+            <td>85286</td>
+          </tr>
+          <tr>
+            <td>DELIA BARRIGA</td>
+            <td>6202 0229 0011 0480</td>
+            <td>10/14/2015</td>
+            <td>2255 E Spruce Dr</td>
+            <td>Chandler</td>
+            <td>AZ</td>
+            <td>85286</td>
+          </tr>
+          <tr>
+            <td>LUCAS MCCARVILLE</td>
+            <td>6202 0229 0011 0458</td>
+            <td>10/14/2015</td>
+            <td>2145 E Longhorn Pl</td>
+            <td>Chandler</td>
+            <td>AZ</td>
+            <td>85286</td>
+          </tr>
+          <tr>
+            <td>ROBERT THOMPSON</td>
+            <td>6202 0331 0015 1263</td>
+            <td>10/14/2015</td>
+            <td>5616 E Demeter Dr</td>
+            <td>Florence</td>
+            <td>AZ</td>
+            <td>85132</td>
+          </tr>
+          <tr>
+            <td>TERR &amp; RILEEN SMITH</td>
+            <td>6200 0333 0012 0300</td>
+            <td>10/14/2015</td>
+            <td>20673 W Hamilton St</td>
+            <td>Buckeye</td>
+            <td>AZ</td>
+            <td>85396</td>
+          </tr>
+          <tr>
+            <td>DANIELLE NICHOLS</td>
+            <td>6202 0331 0015 1261</td>
+            <td>10/14/2015</td>
+            <td>6956 E Sisso Pl</td>
+            <td>Florence</td>
+            <td>AZ</td>
+            <td>85132</td>
+          </tr>
+          <tr>
+            <td>QUYNHCHI DOAN</td>
+            <td>6202 0331 0015 1222</td>
+            <td>10/14/2015</td>
+            <td>6161 E Desert Spoon Ln</td>
+            <td>Florence</td>
+            <td>AZ</td>
+            <td>85132</td>
+          </tr>
+          <tr>
+            <td>BENJAMIN WARREN</td>
+            <td>6202 0331 0015 1301</td>
+            <td>10/14/2015</td>
+            <td>6488 E Stacy St</td>
+            <td>Florence</td>
+            <td>AZ</td>
+            <td>85132</td>
+          </tr>
+          <tr>
+            <td>ROBERT DOYLE</td>
+            <td>6202 0331 0015 1285</td>
+            <td>10/14/2015</td>
+            <td>6136 E Paradise Ln</td>
+            <td>Florence</td>
+            <td>AZ</td>
+            <td>85132</td>
+          </tr>
+          <tr>
+            <td>BRIAN &amp; LYNN ALEXANDER</td>
+            <td>6202 0229 0011 0479</td>
+            <td>10/14/2015</td>
+            <td>1521 S Velero Pl</td>
+            <td>Chandler</td>
+            <td>AZ</td>
+            <td>85286</td>
+          </tr>
+          <tr>
+            <td>JORDEN &amp; MARGARET DUBE</td>
+            <td>6202 0229 0011 0440</td>
+            <td>10/14/2015</td>
+            <td>1756 E Geronimo St</td>
+            <td>Chandler</td>
+            <td>AZ</td>
+            <td>85225</td>
+          </tr>
+          <tr>
+            <td>BERTA KELLY</td>
+            <td>6202 0229 0011 0417</td>
+            <td>10/14/2015</td>
+            <td>1705 E Morelos St</td>
+            <td>Chandler</td>
+            <td>AZ</td>
+            <td>85225</td>
+          </tr>
+          <tr>
+            <td>JEFFREY CHATMON</td>
+            <td>6202 0229 0011 0394</td>
+            <td>10/14/2015</td>
+            <td>480 S Rio Dr</td>
+            <td>Chandler</td>
+            <td>AZ</td>
+            <td>85225</td>
+          </tr>
+          <tr>
+            <td>ROBB STOCKS</td>
+            <td>6202 0229 0011 0414</td>
+            <td>10/14/2015</td>
+            <td>1332 E Geronimo St</td>
+            <td>Chandler</td>
+            <td>AZ</td>
+            <td>85225</td>
+          </tr>
+          <tr>
+            <td>LARRY REEVES</td>
+            <td>6202 0229 0011 0436</td>
+            <td>10/14/2015</td>
+            <td>1203 E Geronimo Pl</td>
+            <td>Chandler</td>
+            <td>AZ</td>
+            <td>85225</td>
+          </tr>
+          <tr>
+            <td>MARK &amp; GAYLE HEDLUND</td>
+            <td>6202 0331 0015 1288</td>
+            <td>10/14/2015</td>
+            <td>7011 W Willow Ct</td>
+            <td>Florence</td>
+            <td>AZ</td>
+            <td>85132</td>
+          </tr>
+          <tr>
+            <td>DEBORAH HIGUERA</td>
+            <td>6202 0229 0011 0416</td>
+            <td>10/14/2015</td>
+            <td>621 S Ithica St</td>
+            <td>Chandler</td>
+            <td>AZ</td>
+            <td>85225</td>
+          </tr>
+          <tr>
+            <td>DANIEL TIRADO</td>
+            <td>6202 0331 0015 1283</td>
+            <td>10/14/2015</td>
+            <td>6085 E Paradise Ln</td>
+            <td>Florence</td>
+            <td>AZ</td>
+            <td>85132</td>
+          </tr>
+          <tr>
+            <td>MELISSA FORD</td>
+            <td>6202 0229 0011 0420</td>
+            <td>10/14/2015</td>
+            <td>265 N Bedford St</td>
+            <td>Chandler</td>
+            <td>AZ</td>
+            <td>85225</td>
           </tr>
         </tbody>
       </table>
+      </div><!--/ .table-responsive -->
       
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas iaculis egestas nibh, id posuere eros rutrum id. Nulla sit amet arcu quis nisi consectetur consequat eu a justo. Etiam in magna a velit tempus maximus. Morbi pulvinar turpis at odio hendrerit maximus. Nunc tristique rutrum sapien. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum gravida massa libero, congue sollicitudin purus luctus ut. Nunc consectetur risus non nulla volutpat, nec malesuada lectus mattis. Nunc venenatis venenatis accumsan. Morbi massa nibh, suscipit id laoreet et, ultricies eget tellus.</p>
 
