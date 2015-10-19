@@ -137,7 +137,7 @@ p {color:#737a84;}
   .tableHeader .tableControls {display:block;float:none;margin:7px 0;}
   .tableHeader .tableControls > ul > li {font-size:18px;margin-left:14px;}
   .tableHeader .tableControls > ul > li:first-child {margin:0;}
-  .tableHeader .tableControls > ul > li > a > span {display:none;}
+  .tableHeader .tableControls > ul > li > a > span > span {display:none;}
 }
 
 .table {}
@@ -267,19 +267,20 @@ section.page {padding:24px 0;}
   .card {margin:0 0 15px;}
 }
 
-.responsiveCards {display:flex;display:-webkit-flex;flex-flow:row wrap}
+.responsiveCards {display:flex;display:-webkit-flex;flex-flow:wrap;height:auto;justify-content:center;flex-grow:3;align-items:stretch;}
 .responsiveCards .card {flex:1 auto;margin:8px;}
 
 @media (min-width: 991px) {
   .responsiveCards .card {flex:3 0px;}
 }
 
-
+.card.chart {position:relative;}
 .card.chart .chartLabels h4 {font-size:18px;font-weight:600;}
 .card.chart .chartLabels h4 small {display:block;clear:both;font-size:65%;font-weight:400;}
 .card.chart .chartLabels .figure {text-align:right;font-weight:bold;}
 
-canvas {width:100%!important;height:auto!important;}
+.card.chart .canvasWrap {/*position:absolute;bottom:0;left:0;padding:10px;width:100%;*/}
+.card.chart .canvasWrap canvas {width:100%!important;height:auto!important;}
 
 
 
