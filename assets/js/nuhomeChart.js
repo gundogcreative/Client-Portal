@@ -17,7 +17,7 @@ var lineData = {
   datasets: [
     {
       label: "Calls Past 7 Days",
-      fillColor: "rgba(220,220,220,0.4)",
+      fillColor: "rgba(220,220,220,0.0)",
       strokeColor: "rgba(55,118,187,1)",
       pointColor: "rgba(55,118,187,1)",
       pointStrokeColor: "#fff",
