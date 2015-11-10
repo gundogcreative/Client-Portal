@@ -65,6 +65,29 @@ Utilized for card chart responsive displays
 + assets/css/slick.css
 + assets/js/slick.min.js
 
+####jQuery Bootstrap-style Dropdowns
+
+*Version Installed: https://github.com/claviska/jquery-dropdown
+[http://labs.abeautifulsite.net/jquery-dropdown/](http://labs.abeautifulsite.net/jquery-dropdown/)
+
+Utilized for table controls
+
+#####Includes:
+
++ assets/css/select2.min.css
++ assets/js/select2.full.min.js
+
+####Select2
+
+*Version Installed: 4.0.0
+[https://select2.github.io/](https://select2.github.io/)
+
+jQuery Select Boxes. Replaces default select boxes.
+
+#####Includes:
+
++ assets/js/jquery.dropdown.min.js
+
 ----
 
 ###Navigation Structure
